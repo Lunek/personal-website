@@ -1,0 +1,55 @@
+<div class="main-container">
+  <div class="scroll-container">
+    <div class="step-section" (click)="scrollFunction('section1')">
+      <div class="vertical-nav">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div class="step-section" (click)="scrollFunction('section2')">
+      <div class="vertical-nav">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div class="step-section" (click)="scrollFunction('section3')">
+      <div class="vertical-nav">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div class="step-section" (click)="scrollFunction('section4')">
+      <div class="vertical-nav">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div class="step-section" (click)="scrollFunction('section5')">
+      <div class="vertical-nav">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-outer" id="section1" (visibilityChange)="_visibilityChangeHandler($event, 1)" inView>
+    <div class="card-container">
+      <h3>Section 1</h3>
+    </div>
+  </div>
+  <div class="scroll-outer" id="section2" (visibilityChange)="_visibilityChangeHandler($event, 2)" inView>
+    <div class="card-container">
+      <h3>Section 2</h3>
+    </div>
+  </div>
+  <div class="scroll-outer" id="section3" (visibilityChange)="_visibilityChangeHandler($event, 3)" inView>
+    <div class="card-container">
+      <h3>Section 3</h3>
+    </div>
+  </div>
+  <div class="scroll-outer" id="section4" (visibilityChange)="_visibilityChangeHandler($event, 4)" inView>
+    <div class="card-container">
+      <h3>Section 4</h3>
+    </div>
+  </div>
+  <div class="scroll-outer" id="section5" (visibilityChange)="_visibilityChangeHandler($event, 5)" inView>
+    <div class="card-container">
+      <h3>Section 5</h3>
+    </div>
+  </div>
+</div>
