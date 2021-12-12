@@ -92,7 +92,7 @@ export class Logger {
     Logger.level = LogLevel.Off
   }
 
-  constructor(private source?: string, private sourceLevel?: LogLevel) {}
+  constructor(private source: string, private sourceLevel?: LogLevel) {}
 
   /**
    * Logs messages or objects  with the debug level.
@@ -139,7 +139,7 @@ export class Logger {
         : objects
       func.apply(console, log)
       Logger.outputs.forEach((output) =>
-        output.apply(output, [this.source, level].concat(objects))
+        output.apply(output, [this.source, level, ...objects])
       )
     }
   }

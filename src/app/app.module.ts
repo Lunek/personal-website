@@ -3,12 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InView } from './in-view.directive';
 import { RouterModule } from '@angular/router';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
-  declarations: [AppComponent, InView],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, RouterModule],
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    RouterModule,
+    ComponentsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

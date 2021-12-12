@@ -29,11 +29,6 @@ export class InView implements AfterViewInit, OnDestroy {
     _: IntersectionObserver
   ) => {
     entries.forEach((entry) => {
-
-      // entry.isIntersecting
-      //   ? console.log('VISIBLE', this._elementRef.nativeElement)
-      //   : console.log('NOT VISIBLE', this._elementRef.nativeElement);
-
       this.visibilityChange.emit(entry.isIntersecting);
     });
   };
