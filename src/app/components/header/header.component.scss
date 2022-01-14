@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   height: 10vh;
+  font-size: 16px;
 }
 
 // block
@@ -20,11 +21,14 @@
     display: flex;
     position: absolute;
     left: 0;
-    height: 100%;
-    margin: 0 5em;
+    margin: 0 2em;
 
-    img {
-      padding: 1em;
+    span {
+      font-family: IBMPlexMono;
+      font-weight: 600;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 1.5em;
     }
   }
 
