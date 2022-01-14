@@ -1,0 +1,40 @@
+:host {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+}
+
+// block
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+
+  // element
+  &__logo {
+    display: flex;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    margin: 0 5em;
+
+    img {
+      padding: 1em;
+    }
+  }
+
+  // element
+  &__nav-item {
+    margin-right: 2em;
+
+    // modifier
+    &--current a {
+      color: gold;
+    }
+  }
+}

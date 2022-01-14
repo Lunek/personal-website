@@ -6,12 +6,13 @@ import { AboutComponent } from './about/about.component'
 import { ShellComponent } from './shell/shell.component'
 import { DirectivesModule } from '../directives/directives.module'
 import { VisibilityService } from '../services/visibility.service'
-import { NavigationService } from '../services/navigation.service'
+import { NavigationService } from '../services/navigation.service';
+import { HeaderComponent } from './header/header.component'
 
 @NgModule({
   imports: [CommonModule, DirectivesModule],
-  declarations: [WelcomeComponent, EducationComponent, AboutComponent, ShellComponent],
+  declarations: [WelcomeComponent, EducationComponent, AboutComponent, ShellComponent, HeaderComponent],
   providers: [NavigationService, VisibilityService],
   exports: [ShellComponent]
 })
-export class ComponentsModule {}
+export class ComponentsModule { }
