@@ -7,19 +7,25 @@
     </a>
   </div>
 
-  <div class="header__nav-item" [ngClass]="{
-    'header__nav-item--current': isCurrentFragment('welcome')
-  }">
-    <a href="#welcome">Welcome</a>
-  </div>
-  <div class="header__nav-item" [ngClass]="{
-    'header__nav-item--current': isCurrentFragment('about')
-  }">
-    <a href="#about">About</a>
-  </div>
-  <div class="header__nav-item" [ngClass]="{
-    'header__nav-item--current': isCurrentFragment('education')
-  }">
-    <a href="#education">Education</a>
+  <div class="header__nav">
+    <div class="header__nav-item" [ngClass]="{'header__nav-item--current': isCurrentFragment('welcome')}">
+      <a href="#welcome">
+        <span>Welcome</span>
+      </a>
+    </div>
+    <div class="header__nav-item" [ngClass]="{'header__nav-item--current': isCurrentFragment('about')}">
+      <a href="#about">
+        <span>
+          About
+        </span>
+      </a>
+    </div>
+    <div class="header__nav-item" [ngClass]="{'header__nav-item--current': isCurrentFragment('education')}">
+      <a href="#education">
+        <span>
+          Education
+        </span>
+      </a>
+    </div>
   </div>
 </div>
