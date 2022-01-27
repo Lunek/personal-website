@@ -1,5 +1,109 @@
 .welcome {
+  display: flex;
   width: 100vw;
   height: 100vh;
   background-color: powderblue;
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+  }
+
+  &__t-container {
+    width: 80%;
+    height: 60%;
+  }
+
+  &__t-header {
+    font-family: IBMPlexMono;
+    font-weight: 600;
+    font-size: 3em;
+  }
+
+  &__t-main {
+    font-family: IBMPlexMono;
+    font-weight: 400;
+    font-size: 2em;
+  }
+
+  &__photo {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+  }
+
+  &__p-container {
+    display: flex;
+    height: 70%;
+    margin-left: 5em;
+  }
+
+  &__contact {
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    height: 7em;
+    background-color: red;
+  }
+}
+
+@media (orientation: landscape) {
+
+  // Biggest monitors
+  @media (min-width: 1920px) {
+    .welcome {
+      font-size: 20px;
+    }
+  }
+
+  // Normal monitors
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    .welcome {
+      font-size: 14px;
+    }
+  }
+
+  // Small monitors, laptops
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .welcome {
+      font-size: 13px;
+    }
+  }
+
+
+  // Super small laptops, tablets in landscape
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .welcome {
+      font-size: 11px;
+    }
+  }
+}
+
+// todo
+@media (orientation: portrait) {
+
+  // Big tablets
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .welcome {
+      font-size: 11px;
+    }
+  }
+
+  // Big phones
+  @media (min-width: 481px) and (max-width: 767px) {
+    .welcome {
+      font-size: 9px;
+    }
+  }
+
+  // Small phones
+  @media (min-width: 320px) and (max-width: 480px) {
+    .welcome {
+      font-size: 7px;
+    }
+  }
 }
