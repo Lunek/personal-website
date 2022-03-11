@@ -1,3 +1,5 @@
+@import "animations";
+
 .welcome {
   display: flex;
   width: 100vw;
@@ -43,16 +45,104 @@
   }
 
   &__contact {
+    font-family: IBMPlexMono;
     position: absolute;
     bottom: 0;
     width: 70%;
+    min-width: 1000px;
     height: 7em;
-    background-color: red;
+    background-color: bisque;
+    display: flex;
+
+    .email {
+      align-self: center;
+      display: flex;
+      margin-left: 25px;
+
+      &__text {
+        white-space: nowrap;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-right: 0.5em;
+        font-size: 1.25em;
+      }
+
+      &__address {
+        overflow: hidden;
+        width: 0;
+        border-right: 0.15em solid orange;
+        animation: typing 10s steps(23, end) infinite, blink 1s infinite;
+        white-space: nowrap;
+        font-size: 1.25em;
+      }
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 70px;
+
+      &__text {
+        white-space: nowrap;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-right: 1.25em;
+        font-size: 1.25em;
+      }
+
+      &__icon {
+        display: block;
+        fill: black;
+
+        width: 25px;
+        height: 25px;
+        margin-left: 0.75em;
+
+        &:hover {
+          fill: orange;
+        }
+      }
+    }
+
+    .resume {
+      display: inline-flex;
+      margin-left: 50px;
+      height: 100%;
+      align-items: center;
+      flex: 1;
+      cursor: pointer;
+      background-color: brown;
+      padding-left: 3em;
+
+      &__text {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.5em;
+      }
+
+      &__arrow {
+        display: flex;
+        fill: black;
+
+        margin-left: 2em;
+        width: 25px;
+        height: 25px;
+      }
+
+      &:hover {
+        .resume__arrow {
+          fill: orange;
+          animation: upAndDown 2.5s 0.25s forwards;
+        }
+      }
+    }
   }
 }
 
 @media (orientation: landscape) {
-
   // Biggest monitors
   @media (min-width: 1920px) {
     .welcome {
@@ -74,17 +164,35 @@
     }
   }
 
-
   // Super small laptops, tablets in landscape
   @media (min-width: 768px) and (max-width: 1024px) {
     .welcome {
       font-size: 11px;
+
+      &__contact {
+        min-width: none;
+        width: 100%;
+
+        .resume {
+          display: none !important;
+        }
+      }
     }
   }
 }
 
 // todo
 @media (orientation: portrait) {
+  .welcome {
+    &__contact {
+      min-width: none;
+      width: 100%;
+
+      .resume {
+        display: none !important;
+      }
+    }
+  }
 
   // Big tablets
   @media (min-width: 768px) and (max-width: 1024px) {

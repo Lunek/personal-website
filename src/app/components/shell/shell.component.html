@@ -1,8 +1,17 @@
 <div class="container">
   <app-header></app-header>
-  <app-welcome (visibilityChange)="_visibilityChangeHandler($event, 0)" inView></app-welcome>
-  <app-about (visibilityChange)="_visibilityChangeHandler($event, 1)" inView></app-about>
-  <app-education (visibilityChange)="_visibilityChangeHandler($event, 2)" inView></app-education>
+  <app-welcome
+    (visibilityChange)="_visibilityChangeHandler($event, 0)"
+    inView
+  ></app-welcome>
+  <app-about
+    (visibilityChange)="_visibilityChangeHandler($event, 1)"
+    inView
+  ></app-about>
+  <app-education
+    (visibilityChange)="_visibilityChangeHandler($event, 2)"
+    inView
+  ></app-education>
 </div>
 
 <!-- Overall design https://mycareer.qodeinteractive.com/george/ -->
